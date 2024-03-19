@@ -15,6 +15,7 @@ import { Entitlements } from "./api/resources/entitlements/client/Client";
 import { Environments } from "./api/resources/environments/client/Client";
 import { Events } from "./api/resources/events/client/Client";
 import { Files } from "./api/resources/files/client/Client";
+import { Foreigndb } from "./api/resources/foreigndb/client/Client";
 import { Guests } from "./api/resources/guests/client/Client";
 import { Jobs } from "./api/resources/jobs/client/Client";
 import { Mapping } from "./api/resources/mapping/client/Client";
@@ -108,6 +109,12 @@ export class FlatfileClient {
 
     public get files(): Files {
         return (this._files ??= new Files(this._options));
+    }
+
+    protected _foreigndb: Foreigndb | undefined;
+
+    public get foreigndb(): Foreigndb {
+        return (this._foreigndb ??= new Foreigndb(this._options));
     }
 
     protected _guests: Guests | undefined;

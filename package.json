@@ -1,8 +1,8 @@
 {
     "name": "@flatfile/api",
-    "version": "1.7.8",
+    "version": "0.0.13",
     "private": false,
-    "repository": "https://github.com/FlatFilers/flatfile-node",
+    "repository": "https://github.com/omarrida/flatfile-node",
     "main": "./index.js",
     "types": "./index.d.ts",
     "scripts": {
